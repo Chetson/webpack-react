@@ -1,3 +1,3 @@
 require('../dist/index.html');
-const testJs = require('./test.js');
-console.log('test');
+require('./App.js');
+require('./assets/scss/index.scss');

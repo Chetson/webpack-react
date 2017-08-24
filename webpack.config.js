@@ -3,6 +3,7 @@ const merge = require('webpack-merge');
 const babelConf = require('./webpack/babel');
 const devserver = require('./webpack/devserver');
 const htmlloader = require('./webpack/html-loader');
+const scssloader = require('./webpack/scss-loader');
 
 const common = merge([
   {
@@ -13,7 +14,8 @@ const common = merge([
     }
   },
   babelConf(),
-  htmlloader()
+  htmlloader(),
+  scssloader()
 ]);
 
 
