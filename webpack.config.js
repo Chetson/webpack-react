@@ -2,6 +2,7 @@ const path = require('path');
 const merge = require('webpack-merge');
 const babelConf = require('./webpack/babel');
 const devserver = require('./webpack/devserver');
+const htmlloader = require('./webpack/html-loader');
 
 const common = merge([
   {
@@ -11,7 +12,8 @@ const common = merge([
       path: path.resolve(__dirname, 'dist')
     }
   },
-  babelConf()
+  babelConf(),
+  htmlloader()
 ]);
 
 
